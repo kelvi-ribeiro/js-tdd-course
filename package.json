@@ -4,9 +4,9 @@
   "description": "Biblioteca do curso de JS com TDD na pratica",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush":"npm run lint"
+    "prepush": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,11 @@
   },
   "homepage": "https://github.com/kelvi-ribeiro/js-tdd-course#readme",
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "husky": "^1.0.0-rc.12"
+    "husky": "^1.0.0-rc.12",
+    "mocha": "^5.2.0"
   }
 }
