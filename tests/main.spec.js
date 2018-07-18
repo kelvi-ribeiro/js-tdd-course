@@ -29,4 +29,7 @@ describe('FizzBuzz', () => {
   it('should return the number when non-multiple of 3 and 5',() => {
     expect(FizzBuzz(14)).to.be.equal(14);
   });
+  it('should return 0 when 0',() => {
+    expect(FizzBuzz(0)).to.be.equal(0);
+  });
 });
