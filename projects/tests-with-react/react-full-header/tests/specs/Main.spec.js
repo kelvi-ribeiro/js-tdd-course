@@ -1,7 +1,10 @@
 import React from 'react';
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
+import chaiEnzyme from 'chai-enzyme'
 import { shallow } from 'enzyme';
 import FullHeader from '../../src/Main';
+
+chai.use(chaiEnzyme())
 
 describe('FullHeader Hello', () => {
     it('should have header tag when mount', () => {
@@ -37,6 +40,17 @@ describe('FullHeader Hello', () => {
         it('should have have h2 with the title passed', () => {
             const wrapper = shallow(<FullHeader subtitle='Curso' />)
             expect(wrapper.find('h2').props().children).to.be.equal('Curso')
+        })
+    })
+    context('bgColor', () => {
+        it('should have backgrund-color equal #ccc when none is passed', () => {
+            const wrapper = shallow(<FullHeader title='Teste' />)
+            expect(wrapper).to.have.style('background-color').equal('#ccc')
+        })
+
+        it('should have backgrund-color equal #000 when bgColor is passed with #000 value', () => {
+            const wrapper = shallow(<FullHeader title='Teste' bgColor='#000' />)
+            expect(wrapper).to.have.style('background-color').equal('#000')
         })
     })
 });
