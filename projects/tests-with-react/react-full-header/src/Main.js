@@ -5,12 +5,14 @@ const defaultProps = {
     bgColor: '#ccc',
     textColor: '#fff',
     font: 'sans-serif',
+    bgImage:''
 }
 
-const FullHeader = ({ title, subtitle, bgColor, textColor, font }) => {
+const FullHeader = ({ title, subtitle, bgColor, textColor, font, bgImage }) => {
     const headerStyles = {
         backgroundColor: bgColor,
         color: textColor,
+        backgroundImage:`url(${bgImage})`,
         fontFamily: font
     }
     return (
@@ -27,6 +29,7 @@ const propTypes = {
     bgColor: PropTypes.string,
     textColor: PropTypes.string,
     font: PropTypes.string,
+    bgImage: PropTypes.string,
 }
 
 FullHeader.propTypes = propTypes
