@@ -41,7 +41,7 @@ storiesOf('React Full Header', module)
         <FullHeader
             title='TDD'
             subtitle="Curso de JavaScript com TDD na prática"
-            bgImg='http://kelvi-ribeiro-curriculum.surge.sh/img/kelvi-ribeiro.jpg'
+            bgImage='http://www.osmais.com/wallpapers/201510/paisagem-com-cachoeira-wallpaper.jpg'
         />
     )
 
