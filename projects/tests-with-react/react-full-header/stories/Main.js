@@ -45,13 +45,12 @@ storiesOf('React Full Header', module)
         />
     )
 
-
-    .add('with title, subtitle, bgColor, textColor and video', () =>
+    .add('with title, subtitle and video', () => (
         <FullHeader
-            title='TDD'
-            subtitle="Curso de JavaScript com TDD na prática"
-            bgColor='#392'
-            textColor='#902'
-            video='https://www.youtube.com/watch?v=uhFG6GGFebU'
+            title="TDD"
+            subtitle="Curso de JS com TDD na prática."
+            bgColor="#EBE9EB"
+            textColor="#3299BB"
+            video="http://callmenick.com/_development/video/full-screen-background-video/media/demo.mp4"
         />
-    )
+    ));
