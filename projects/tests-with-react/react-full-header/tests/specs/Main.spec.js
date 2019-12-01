@@ -43,14 +43,37 @@ describe('FullHeader Hello', () => {
         })
     })
     context('bgColor', () => {
-        it('should have backgrund-color equal #ccc when none is passed', () => {
+        it('should have back-ground equal #ccc when none is passed', () => {
             const wrapper = shallow(<FullHeader title='Teste' />)
             expect(wrapper).to.have.style('background-color').equal('#ccc')
         })
 
-        it('should have backgrund-color equal #000 when bgColor is passed with #000 value', () => {
+        it('should have back-ground equal #000 when bgColor is passed with #000 value', () => {
             const wrapper = shallow(<FullHeader title='Teste' bgColor='#000' />)
             expect(wrapper).to.have.style('background-color').equal('#000')
+        })
+    })    
+    context('textColor', () => {
+        it('should have color equal #fff when none is passed', () => {
+            const wrapper = shallow(<FullHeader title='Teste' />)
+            expect(wrapper).to.have.style('color').equal('#fff')
+        })
+
+        it('should have back-ground equal #000 when textColor is passed with #000 value', () => {
+            const wrapper = shallow(<FullHeader title='Teste' textColor='#000' />)
+            expect(wrapper).to.have.style('color').equal('#000')
+        })
+    })
+
+    context('font', () => {
+        it('should have font equal sans-serif when none is passed', () => {
+            const wrapper = shallow(<FullHeader title='Teste' />)
+            expect(wrapper).to.have.style('font-family').equal('sans-serif')
+        })
+
+        it('should have font equal #000 when open-sans is passed with open-sans value', () => {
+            const wrapper = shallow(<FullHeader title='Teste' font='open-sans' />)
+            expect(wrapper).to.have.style('font-family').equal('open-sans')
         })
     })
 });
